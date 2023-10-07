@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: technote-space/toc-generator@v2
         with:
-          TARGET_PATHS: README.md, docs/faq.md, docs/development.md
+          TARGET_PATHS: README.md, docs/faq.md, docs/development.md, docs/device-creation.md,  docs/wallet-creation.md
