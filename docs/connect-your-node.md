@@ -71,7 +71,7 @@ node via RPC.
 
 Specter is running on your PC with the local network IP-address 192.168.178.55. You want to allow this machine to be able to send RPC requests and connect Specter to the external node, which has the IP-address 192.168.178.45 in your local network. You also want to be able to do RPC requests on the external node itself, i.e. directly or logged in with a ssh-session. You have to specify the two options in bitcoin.conf as follows:
 
-```
+```bash
 rpcallowip=192.168.178.55/24
 rpcbind=192.168.178.45
 rpcbind=127.0.0.1
@@ -86,14 +86,14 @@ Often enough there are firewalls installed on the machines running services. Usu
 "ufw" is a popular and easy to use firewall (Raspiblitz is using it for example).
 This is how you open the port:
 
-```
+```bash
 sudo ufw allow 8332
 sudo ufw enable
 ```
 
 Note: Again, ideally, you would restrict the access further after trouble shooting:
 
-```
+```bash
 sudo ufw allow from SPECIFIC IP to any port 8332
 ```
 
