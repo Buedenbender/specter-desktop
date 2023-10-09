@@ -1,10 +1,10 @@
 # Adding Devices
 
-Devices are the main building blocks for singlesig and multisig wallets. Different Hardwarewallets are represented as devices as well as the Bitcoin Core Hotwallet or the Electrum Wallet which might hold private keys and export xpubs into Specter Desktop.
+Devices are the main building blocks for singlesig and multisig wallets. Different hardware wallets are represented as devices as well as the Bitcoin Core Hotwallet or the Electrum Wallet which might hold private keys and export xpubs into Specter Desktop.
 
 To Create your own Device, you have to specify the modules containing subclasses of `Device` in `service.py`:
 
-```
+```python
 class DiceService(Service):
     # [...]
     devices = ["mynym.specterext.myextensionid.devices.mydevice"]
@@ -28,7 +28,7 @@ class MyDevice(Device):
     # optional, You might want to have a more specific template for creating a new device
     template = "electrum/device/new_device_keys_electrum.jinja"
 
-    # If your device is a classic Hardwarewallets, it might have one of these features:
+    # If your device is a classic hardware wallet, it might have one of these features:
     sd_card_support = True
     qr_code_support = True
 
